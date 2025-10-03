@@ -9,7 +9,7 @@ const TrafficMap = () => {
   const [points, setPoints] = useState([]);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:3001');
+    const ws = new WebSocket('/ws'); // Corrected to relative path for Nginx proxy
 
     ws.onopen = () => {
       console.log('WebSocket connected');
